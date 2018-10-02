@@ -46,8 +46,8 @@ security:
       userAuthorizationUri: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/oauth/authorize
       clientId: acme
       clientSecret: acmesecret
-      registered-redirect-uri: http://104.248.121.203:8765/login # change to yours
-      pre-established-redirect-uri: http://104.248.121.203:8765/login # change to yours
+      registered-redirect-uri: http://68.183.17.158:8765/login # change to yours
+      pre-established-redirect-uri: http://68.183.17.158:8765/login # change to yours
       use-current-uri: false
     resource:
       jwt:
@@ -124,7 +124,7 @@ eureka:
 
 # The OAuth2 server definition that would be used to send the authorization requests to
 authserver:
-    hostname: 104.248.121.203 # Change to yours hostname
+    hostname: 68.183.17.158 # Change to yours hostname
     port: 8899
     contextPath: userauth
 
