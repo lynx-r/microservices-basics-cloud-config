@@ -32,6 +32,3 @@ eureka:
 # since each docker container has it's own IP
 server:
   port: 8080
-
-logging:
-  path: /app

@@ -1,3 +1,5 @@
 mail:
   domain: gmail.com
   
+logging:
+  path: /app
