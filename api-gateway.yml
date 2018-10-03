@@ -46,8 +46,8 @@ security:
       userAuthorizationUri: http://${authserver.hostname}:${authserver.port}/${authserver.contextPath}/oauth/authorize
       clientId: acme
       clientSecret: acmesecret
-      registered-redirect-uri: http://68.183.17.158:8765/login # change to yours
-      pre-established-redirect-uri: http://68.183.17.158:8765/login # change to yours
+      registered-redirect-uri: http://localhost:8765/login
+      pre-established-redirect-uri: http://localhost:8765/login
       use-current-uri: false
     resource:
       jwt:
@@ -113,6 +113,12 @@ spring:
   zipkin:
     baseUrl: http://zipkinserver:9411/
 
+security:
+  oauth2:
+    client:
+      registered-redirect-uri: http://68.183.17.158:8765/login # change to your
+      pre-established-redirect-uri: http://68.183.17.158:8765/login # change to your
+
 eureka:
 # Register our microservices to Eureka using hostnames in a Docker environment will not work, they will all get
 # one and the same hostname. Instead we configure them to use its IP address during registration with Eureka.
@@ -124,7 +130,7 @@ eureka:
 
 # The OAuth2 server definition that would be used to send the authorization requests to
 authserver:
-    hostname: 68.183.17.158 # Change to yours hostname
+    hostname: 68.183.17.158 # Change to your hostname
     port: 8899
     contextPath: userauth
 
